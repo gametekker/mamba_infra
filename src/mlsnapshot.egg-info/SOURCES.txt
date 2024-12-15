@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/mlsnapshot/__init__.py
+src/mlsnapshot/api.py
+src/mlsnapshot/example_app.py
+src/mlsnapshot/test_example_api.py
+src/mlsnapshot.egg-info/PKG-INFO
+src/mlsnapshot.egg-info/SOURCES.txt
+src/mlsnapshot.egg-info/dependency_links.txt
+src/mlsnapshot.egg-info/top_level.txt
