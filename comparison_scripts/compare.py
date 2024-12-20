@@ -24,7 +24,7 @@ def compare_first_item_in_lists(folder_a, folder_b):
                         if torch.equal(first_item_a,first_item_b):
                             print(f"Subfolder {subfolder}: First items are equal.")
                         else:
-                            print(f"Subfolder {subfolder}: First items are different by {torch.quantile((first_item_a-first_item_b)/first_item_a,.5)}.")
+                            print(f"Subfolder {subfolder}: First items are different by {torch.quantile(torch.abs(first_item_a-first_item_b),.5)}.")
                     else:
                         print(f"Subfolder {subfolder}: One or both lists are empty.")
                 except json.JSONDecodeError:
@@ -33,8 +33,8 @@ def compare_first_item_in_lists(folder_a, folder_b):
             print(f"Subfolder {subfolder}: 'output.json' not found in one or both folders.")
 
 # Specify the paths to folder A and folder B
-folder_a_path = '/home/riley/mamba/snapshot/mamba/selective_scan_fn'
-folder_b_path = '/home/riley/mamba/snapshot/mamba_dt/selective_scan_fn'
+folder_a_path = '/home/riley/mamba/mamba_versions_2/comp/v1/mamba/selective_scan_fn'
+folder_b_path = '/home/riley/mamba/mamba_versions_2/comp/v2/mamba/selective_scan_fn'
 
 # Run the comparison
 compare_first_item_in_lists(folder_a_path, folder_b_path)
